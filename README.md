@@ -17,7 +17,10 @@ MJWarp is a GPU-optimized version of the [MuJoCo](https://github.com/google-deep
 > * MJWarp is mostly feature complete but requires performance optimization, documentation, and testing.
 > * The intended audience during Beta are physics engine enthusiasts and learning framework integrators.
 > * Machine learning / robotics researchers who just want to train policies should wait for the [MJX](https://mujoco.readthedocs.io/en/stable/mjx.html) or [Isaac](https://isaac-sim.github.io/IsaacLab/main/index.html)/[Newton](https://github.com/newton-physics/newton) integrations, which are coming soon.
-
+> MJWarp is in Beta and under active development:
+> * MJWarp developers will triage and respond to [bug report and feature requests](https://github.com/google-deepmind/mujoco_warp/issues).
+> * MJWarp is mostly feature complete but requires performance optimization, documentation, and testing.
+> * The intended audience during Beta are physics engine enthusiasts and learning framework integrators.
 MJWarp uses [NVIDIA Warp](https://github.com/NVIDIA/warp) to circumvent many of the [sharp bits](https://mujoco.readthedocs.io/en/stable/mjx.html#mjx-the-sharp-bits) in [MuJoCo MJX](https://mujoco.readthedocs.io/en/stable/mjx.html#). MJWarp is integrated into both [MJX](https://mujoco.readthedocs.io/en/stable/mjx.html) and [Newton](https://github.com/newton-physics/newton).
 
 MJWarp is maintained by [Google DeepMind](https://deepmind.google/) and [NVIDIA](https://www.nvidia.com/).
@@ -46,7 +49,14 @@ python -m venv env
 pip install --upgrade pip
 pip install uv
 ```
-
+```powershell
+git clone https://github.com/google-deepmind/mujoco_warp.git
+cd mujoco_warp
+python -m venv env
+.\env\Scripts\Activate.ps1  # For MSYS2 Python: env\bin\activate
+pip install --upgrade pip
+pip install uv
+```
 
 Then install MJWarp in editable mode for local development:
 
