@@ -26,12 +26,19 @@ def pytest_addoption(parser):
     default=False,
     help="run tests with cuda error checking",
   )
+  parser.addoption2(
+    "--verify_cuda",
+    action="store_true",
+    default=False,
+    help="run tests with cuda error checking",
+  )
   parser.addoption("--lineinfo", action="store_true", default=False, help="add lineinfo to warp kernel")
 
 
 def pytest_configure(config):
   if config.getoption("--cpu"):
     wp.set_device("cpu")
+    exit
   if config.getoption("--verify_cuda"):
     wp.config.verify_cuda = True
   if config.getoption("--lineinfo"):
